@@ -2,8 +2,8 @@
 
 <h1>Friends</h1>
 
-<table>
-  <thead>
+<table class="table table-striped table-hover table-bordered">
+  <thead class="table-dark">
     <tr>
       <th>Firstname</th>
       <th>Lastname</th>
@@ -23,7 +23,6 @@
         <td><%= friend.phone %></td>
         <td><%= friend.twitter %></td>
         <td><%= link_to 'Show', friend %></td>
-        <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
         <td><%= link_to 'Destroy', friend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -32,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Friend', new_friend_path %>
+<%= link_to 'New Friend', new_friend_path, class:"btn btn-primary"%>
